@@ -15,9 +15,16 @@ public class WheelController : MonoBehaviour
     private float currentAcceleration = 0f;
     private float currentBreakForce = 0f;
 
-    /*
+    
     private void FixedUpdate()
     {
+        currentAcceleration = acceleration * Input.GetAxis("Vertical");
+
+        if (Input.GetKey(KeyCode.Space))
+            currentBreakForce = breakingForce;
+        else
+            currentBreakForce = 0f;
+
         // Apply acceleration to front wheels
         frontRight.motorTorque = currentAcceleration;
         frontLeft.motorTorque = currentAcceleration;
@@ -28,8 +35,8 @@ public class WheelController : MonoBehaviour
         backRight.brakeTorque = currentBreakForce;
         backLeft.brakeTorque = currentBreakForce;
     }
-    */
-
+    
+    /*
     public void accelerateButton()
     {
         frontRight.motorTorque = currentAcceleration * Time.fixedDeltaTime;
@@ -40,6 +47,6 @@ public class WheelController : MonoBehaviour
     {
         currentBreakForce = breakingForce;
     }
-
+    */
 
 }
